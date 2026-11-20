@@ -1,0 +1,101 @@
+/* 魔塔闯关小游戏样式（纯 CSS，无第三方依赖） */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: #1c2333;
+  color: #e8ecf3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mt-layout {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+.mt-title { font-size: 20px; margin: 0 0 12px; }
+
+.mt-board {
+  display: grid;
+  gap: 2px;
+  background: #101624;
+  padding: 8px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.mt-cell {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.mt-floor { background: #2b3550; }
+.mt-wall { background: #55627a; }
+.mt-player { background: #f5c542; color: #1c2333; }
+.mt-door-yellow { background: #caa53a; color: #1c2333; }
+.mt-door-blue { background: #3f7fd8; color: #fff; }
+.mt-door-red { background: #c94f4f; color: #fff; }
+.mt-key-yellow { background: #ffe066; color: #1c2333; }
+.mt-key-blue { background: #7db4ff; color: #1c2333; }
+.mt-key-red { background: #ff8f8f; color: #1c2333; }
+.mt-potion { background: #57c98a; color: #10321f; }
+.mt-gem-atk { background: #ff9b57; color: #3a1c05; }
+.mt-gem-def { background: #9b8cff; color: #1b1240; }
+.mt-stairs { background: #d9dee8; color: #1c2333; }
+.mt-monster { background: #3d2b4f; color: #ffd9ec; }
+
+.mt-sidebar {
+  width: 220px;
+  background: #242e46;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.mt-sidebar h2 { font-size: 14px; margin: 12px 0 8px; color: #aab6d0; }
+.mt-sidebar h2:first-child { margin-top: 0; }
+
+.mt-stats, .mt-keys { list-style: none; margin: 0; padding: 0; font-size: 15px; line-height: 1.9; }
+.mt-swatch {
+  display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px;
+}
+.mt-key-yellow { background: #ffe066; }
+.mt-key-blue { background: #7db4ff; }
+.mt-key-red { background: #ff8f8f; }
+
+.mt-message {
+  min-height: 60px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ffd9a0;
+  white-space: pre-wrap;
+}
+
+#restart {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  background: #f5c542;
+  color: #1c2333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#restart:hover { background: #ffd76a; }
+
+.mt-tip { color: #8a97b3; font-size: 12px; }

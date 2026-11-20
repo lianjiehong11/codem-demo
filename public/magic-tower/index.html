@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>魔塔闯关小游戏</title>
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+  <body>
+    <div class="mt-layout">
+      <main class="mt-board-wrap">
+        <h1 class="mt-title">魔塔闯关</h1>
+        <div id="game" class="mt-board" tabindex="0"></div>
+        <p class="mt-tip">方向键 / WASD 移动，Enter 重新开始</p>
+      </main>
+      <aside class="mt-sidebar">
+        <h2>勇士状态</h2>
+        <ul class="mt-stats">
+          <li>生命 <span id="stat-hp"></span></li>
+          <li>攻击 <span id="stat-atk"></span></li>
+          <li>防御 <span id="stat-def"></span></li>
+          <li>楼层 <span id="stat-floor"></span></li>
+        </ul>
+        <h2>钥匙</h2>
+        <ul class="mt-keys">
+          <li><span class="mt-swatch mt-key-yellow"></span>黄钥匙 ×<span id="key-yellow"></span></li>
+          <li><span class="mt-swatch mt-key-blue"></span>蓝钥匙 ×<span id="key-blue"></span></li>
+          <li><span class="mt-swatch mt-key-red"></span>红钥匙 ×<span id="key-red"></span></li>
+        </ul>
+        <h2>信息</h2>
+        <p id="message" class="mt-message">&nbsp;</p>
+        <button id="restart" type="button">重新开始</button>
+      </aside>
+    </div>
+    <script src="./maps.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
